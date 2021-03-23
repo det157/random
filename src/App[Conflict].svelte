@@ -11,11 +11,8 @@
 
 	var cellPhone = getRandomArbitrary(23,225)
 	var carInsurance = getRandomArbitrary(75,220)
-	var carPayment = getRandomArbitrary(0,520)
-	var utilities = getRandomArbitrary(70,250)
-	var gas = getRandomArbitrary(25,200)
-	var entertainment = getRandomArbitrary(50,400)
-	var cableInternet = getRandomArbitrary(50,175)
+	var carPayment = getRandomArbitrary(70,520)
+	var cableInternet = getRandomArbitrary(70,170)
 
 	//Names
 	var names = ['Zi Hurley','Javan Avalos','Marcus Johnson','Rianne Mill','Penny Valenzuela','Kayne Emery','Leilani Read','Mercedes Ochoa','Freyja Oconnor','Trinity Redfern','Mikaela O\'Gallagher','Kenneth Downs','Miriam Begum','Hawwa Mellor','Joy Zuniga','Abdur-Rahman Mccallum','Kairo Kidd','Renae Casey','Klay Merrill','Sian Rudd','Nolan Wolfe','Edie Walters','Isobel Black','Jokubas Goldsmith','Keenan Busby','Linda Trejo','Ismael Turner','Tj Mcnamara','Bob Nichols','Maaria Rayner','Iain Forbes','Jon-Paul Horn','Etta Patton','Kirstin Howell','Alessandra Maddox','Marisa Sharples','Nadia Ellison','John Chung','Ammarah Bray','Corrina Gill','Joanne Howard','Samira Zavala','Kezia Rivera','Bernard Odom','Yolanda Cash','Lennie Pollard','Lily Pham','Nicolas Henry','Kobi English','Charley Howells','Rio Schmitt','Joseff Nieves','Arielle Ray','Cecelia Sheppard','Paris Carty','Karan Rivas','Eshan Gaines','Austin Storey','Kimberly Wiggins','Lydia Davila','Aarush Markham','Tamera Knights','Amber-Rose Avery','Kie Gibbs','Donnell Hilton','Aliya Wormald','Sahil Armstrong','Rafferty Garrison','Simone Williamson','Vincenzo Mathews','Bethany Pratt','Merlin Perez','Tasmin Ferrell','Indigo Petty','Avleen Benitez','Suzanne Rios','Viaan Mcgowan','Ayrton Malone','Sanna Gonzales','Indiana Summers','Milli Guerra','Sade Boone','Zaine Webb','Nabila Correa','Anne-Marie Vazquez','Maariyah Bryan','Sumaya Legge','Susanna Hickman','Patrik Stephenson','Shannon Hogg','Ikrah Graham','Angelica Hoover','Daniyal Neal','Brooke Sadler','Gloria Mcleod','Randy Fry','Filip Wyatt','Leela Daniels','Bogdan Mcknight','Bilal Turnbull'];
@@ -516,17 +513,12 @@
 		}
 	]
 	var modifier = modifiers[Math.floor(Math.random() * modifiers.length)];
-
-	var maxBAH = detail.BAH * 1.20;
-	var minBAH = detail.BAH * .9;
-	var rent = getRandomArbitrary(minBAH,maxBAH)
 </script>
 
 <main>
 	<div class="content">
 	<h1><img src="{avatar}" alt="" height=150 width=150 style="vertical-align: middle; padding: 10px;">{detail.rank} {name}</h1>
-	<h2>Income</h2>	
-	<table class="customTable">
+		<table class="customTable">
 			<tr>
 				<th style="width:50%">Category</th>
 				<th style="width:50%">Data</th>
@@ -557,23 +549,15 @@
 			</tr>
 		</table>
 
-		<h2>Special Modifier</h2>
-
 		<div class="modifier">
 			<h2>{modifier.description}</h2>
 			<h3>{modifier.change}</h3>
 		</div>
 
-		<h2>Bills</h2>
-
 		<table class="customTable">
 			<tr>
 				<th style="width:50%">Category</th>
 				<th style="width:50%">Cost</th>
-			</tr>
-			<tr>
-				<td>Mortgage/Rent</td>
-				<td>${rent}</td>
 			</tr>
 			<tr>
 				<td>Food</td>
@@ -592,21 +576,12 @@
 				<td>${carPayment}</td>
 			</tr>
 			<tr>
-				<td>Power/Water/Utilities</td>
-				<td>${utilities}</td>
-			</tr>
-			<tr>
-			<tr>
-				<td>Entertainment</td>
-				<td>${entertainment}</td>
-			</tr>
-			<tr>
 				<td>Cable/Internet</td>
 				<td>${cableInternet}</td>
 			</tr>
 			<tr>
-				<td>Gas</td>
-				<td>${gas}</td>
+				<td>Zip Code</td>
+				<td>{detail.zip}</td>
 			</tr>
 		</table>
 
